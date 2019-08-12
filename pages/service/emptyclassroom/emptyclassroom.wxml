@@ -1,0 +1,45 @@
+<loading hidden="{{!isloading}}">获取空教室中</loading>
+<view class='head'>
+  <view class='back_container' bindtap='back_to_service'>
+    <image class='back' src='/images/changeuserinfo/back.png' mode='widthFix'></image>
+  </view>
+  <view class='title'>查询结果</view>
+</view>
+<view class='main'>
+  <view class='result-container'>
+    <scroll-view scroll-x="true" class='scrollClass'>
+      <view class='table'>
+        <view class='table_header'>
+          <block wx:for="{{roomObj}}" wx:key="index">
+            <view class='th'>
+              <view class="cell_label centerclass">{{item}}</view>
+              <view class="cell_date_label centerclass"></view>
+            </view>
+          </block>
+        </view>
+
+
+
+        <block wx:for="{{emptyClassroom[page]}}" wx:for-item="classroomObj" wx:key="index">
+          <view class='table_main'>
+            <view class='td' wx:for="{{classroomObj}}" wx:for-item="content" wx:key="index">
+              <view class="cell_label centerclass">{{content}}</view>
+              <view class="cell_date_label centerclass"></view>
+            </view>
+          </view>
+        </block>
+
+
+      </view>
+    </scroll-view>
+  </view>
+  <view class='change-page'>
+      <view class='pre' bindtap='get_pre_page'>
+        <image class='pre-img' src='/images/service/emptyclassroom/pre.png' mode='widthFix'></image>
+      </view>
+      <view class='change-text'>第{{page}}页</view>
+      <view class='next' bindtap='get_next_page'>
+        <image class='next-img' src='/images/service/emptyclassroom/next.png' mode='widthFix'></image>
+      </view>
+    </view>
+</view>

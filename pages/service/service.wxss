@@ -1,0 +1,95 @@
+
+page { 
+  background-color: #fafafa;
+  height: 100%;
+  width: 100%;
+}
+
+.border-shadow {
+  border: 1px #dee1e8 solid;
+  border-radius: 15rpx;
+  box-shadow: 0 10rpx 25rpx #dee1e8;
+}
+
+.route{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: 0rpx;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  height: 9%;
+  width: 100%;
+  background-color: #36465d;
+  margin-bottom: auto;
+  color: white
+}
+
+.service_title {
+  display: flex;
+  width: 200rpx;
+  height: 50%;
+  margin: auto;
+  margin-left: 40rpx;
+  margin-bottom: 20rpx
+}
+
+.body{
+  display: flex;
+  height: 85%;
+  width: 100%;
+  flex-direction: column; 
+}
+
+.serviceArea{
+  display: flex;
+  width: 90%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  margin-top: 30rpx;
+  background-color: white;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.serviceLogo{
+  display: flex;
+  height: 60rpx;
+  width: 60rpx;
+  margin: auto;
+  margin-left: 20rpx;
+  margin-right: 40rpx
+}
+
+.serviceText{
+  display: flex;
+  width: 400rpx;
+  margin: auto;
+  margin-left: 0rpx;
+}
+
+
+
+.arrow-wrapper{
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  margin-right: 40rpx
+}
+
+.arrow{
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-top: 5rpx solid #999;
+  border-right: 5rpx solid #999;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+
+

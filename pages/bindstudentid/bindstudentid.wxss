@@ -1,0 +1,96 @@
+
+page { 
+  background-color: #fafafa;
+  height: 100%;
+  width: 100%;
+}
+
+.route{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: 0rpx;
+  flex-direction: column;
+}
+
+.head {
+  display: flexl;
+  height: 9%;
+  width: 100%;
+  background-color: #36465d;
+  margin-bottom: 20%
+}
+
+.back_container {
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+}
+
+.body{
+  display: flex;
+  height: 85%;
+  width: 100%;
+  flex-direction: column; 
+}
+
+.inputArea{
+  display: flex;
+  width: 90%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  margin-top: 20rpx;
+  background-color: white;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.studentIdContanier{
+  display: flex;
+  height: 100%;
+  width: 20%
+}
+
+.studentIdInput {
+  display: flex;
+  height: 100%;
+  width: 60%;
+}
+
+
+.password{
+  display: flex;
+  height: 100%;
+  width: 20%
+}
+
+.passwordInput {
+  height: 100%;
+  width: 80%;
+}
+
+.mytext{
+  display: flex;
+  margin: auto;
+}
+
+.login{
+  display: flex;
+  height: 80rpx;
+  width: 80%;
+  color: white;
+  text-align: center;
+  background-color: #36465d;
+  border-radius: 10rpx;
+  margin: auto;
+  margin-bottom: 20%
+}
+
+.login-container{
+  display: flex;
+  margin: auto
+}

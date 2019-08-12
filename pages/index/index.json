@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "articalDisplay": "/components /articalDisplay/articalDisplay",
+    "messageBox": "/components /messageBox/messageBox"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,68 @@
+<!--pages/service/selecttime/selecttime.wxml-->
+<view class='route'>
+  <view class='head'>
+    <view class='back_container' bindtap='back_to_service'>
+      <image class='back' src='/images/changeuserinfo/back.png' mode='widthFix'></image>
+    </view>
+    <view class='title'>选择查询时间</view>
+  </view>
+  <view class='week  border-shadow'>
+    <view class='week-text-wrapper'>
+      <view class='week-text'>
+        周次
+      </view>
+    </view>
+    <view class='week-container'>
+      <block wx:for="{{weekList}}" wx:for-item="week" wx:for-index="Index" wx:key="index">
+        <view class='week-unit' id='day-unit-{{Index}}' style='background-color:{{week_unit_color[Index]}}' data-weekIndex="{{Index}}" bindtap='setWeek'>{{week}}</view>
+      </block>
+    </view>
+    <view class='week-empty-container'>
+      <view class='week-empty' bindtap='empty_week'>
+        <view class='week-empty-text'>
+          清空
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='day border-shadow'>
+    <view class='day-text-wrapper'>
+      星期
+    </view>
+    <view class='day-container'>
+      <block wx:for="{{dayList}}" wx:for-item="day" wx:for-index="Index" wx:key="index">
+        <view class='day-unit' id='week-unit--{{Index}}' style='background-color:{{day_unit_color[Index]}}' data-dayIndex="{{Index}}" bindtap='setDay'>{{day}}</view>
+      </block>
+    </view>
+    <view class='day-empty-container'>
+      <view class='day-empty' bindtap='empty_day'>
+        清空
+      </view>
+    </view>
+  </view>
+  <view class='section border-shadow'>
+    <view class='section-text-wrapper'>
+      <view class='section-text'>
+        节次
+      </view>
+    </view>
+    <view class='section-container'>
+      <block wx:for="{{charactersList}}" wx:for-item="characters" wx:for-index="Index" wx:key="index">
+        <view class='characters-unit'>{{characters}}</view>
+      </block>
+      <block wx:for="{{sectionList}}" wx:for-item="section" wx:for-index="Index" wx:key="index">
+        <view class='section-unit' id='section-unit-{{Index}}' style='background-color:{{characters_unit_color[Index]}}' data-charactersIndex="{{Index}}" bindtap='setCharacters'>{{section}}</view>
+      </block>
+    </view>
+    <view class='section-empty-container'>
+      <view class='section-empty' bindtap='empty_characters'>
+        <view class='section-empty-text'>
+          清空
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom border-shadow' bindtap='go_to_query'>
+    查询空教室
+  </view>
+</view>

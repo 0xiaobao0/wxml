@@ -1,0 +1,86 @@
+/* components /messageBox/messageBox.wxss */
+.private-message {
+  display: flex;
+  height: 140rpx;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2rpx solid #dfdfdf;
+}
+
+.private-logo-area{
+  display: flex;
+  height: 90rpx;
+  width: 90rpx;
+  margin: auto;
+  margin-right: 40rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.private-message-logo {
+  height: 90rpx;
+  width: 90rpx;
+}
+
+.private-content {
+  display: flex;
+  height: 130rpx;
+  width: 70%;
+  margin: auto;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  flex-direction: column
+}
+
+.private-title {
+  height: 30%;
+  width: auto;
+  max-width: 60%;
+  font-size: 0.7rem;
+  color: rgb(136, 135, 135);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.private-content-message-area {
+  display: flex;
+  height: 40%;
+  font-size: 0.75rem;
+  align-items: center;
+  color: rgb(136, 135, 135)
+}
+
+.message-send-time{
+  display: flex;
+  height: 30%;
+  width: auto;
+  font-size: 0.6rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  color: rgb(136, 135, 135)
+}
+
+.private-content-message{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.private-message-arrow-area {
+  width: 10px;
+  height: 10px;
+  margin: auto;
+}
+
+.private-message-arrow {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-top: 5rpx solid #999;
+  border-right: 5rpx solid #999;
+  position: absolute;
+  transform: rotate(45deg);
+}

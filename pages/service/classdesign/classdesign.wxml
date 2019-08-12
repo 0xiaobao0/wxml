@@ -1,0 +1,39 @@
+<view class='route'>
+<loading hidden="{{!isloading}}">获取课设中</loading>
+  <view class='head'>
+    <view class='back_container' bindtap='back_to_service'>
+      <image class='back' src='/images/changeuserinfo/back.png' mode='widthFix'></image>
+    </view>
+    <view class='title'>我的课设</view>
+  </view>
+  <view class='body'>
+    <view wx:for='{{myClassdesign}}'  wx:for-item="articalObj" wx:for-index="Index" wx:key="index">
+      <view class='card border-shadow'>
+      <view class='card_head'>
+        <view class='card_text'>
+          课设名称:
+        </view>
+        <view class='result_text'>
+          {{articalObj.kcmc}}
+        </view>
+      </view>
+      <view class='card_body'>
+        <view class='card_text'>
+          时间安排:
+        </view>
+        <view class='result_text'>
+          {{articalObj.qsjsz}}
+        </view>
+      </view>
+      <view class='card_bottom'>
+        <view class='card_text'>
+          指导老师:
+        </view>
+        <view class='result_text'>
+          {{articalObj.xm}}
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

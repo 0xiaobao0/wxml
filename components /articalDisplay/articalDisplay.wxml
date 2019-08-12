@@ -1,0 +1,73 @@
+<view class='comment-area' style="display:{{showCommentArea ? 'flex' : 'none'}}">
+  <view class='comment-area-head'>
+    <view class='comment-area-head-text'>{{articalObj.artical_fever}}热度</view>
+    <view class='close-comment' bindtap='close_comment_function'>
+      <image src='/images/close.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <scroll-view class='comment-area-body'scroll-y="true">
+    <view view class='comment-area-body-area' >
+      <comment-message autherNickname='{{articalObj.sender_nickname}}' autherAvatarurl='{{articalObj.sender_avatarurl}}' articalComment='{{articalComment}}'></comment-message>
+      <!-- <block wx:for="{{articalComment}}" wx:for-item="CommentObj" wx:for-index="Index" wx:key="index">
+
+      </block> -->
+    </view >
+  </scroll-view>
+  <view class='comment-area-bottom'>
+    <view class='comment-area-bottom-input'>
+      <input placeholder='说点什么吗？' class='comment_input' placeholder-style='font-size:0.8rem' bindinput='get_comment_value' value='{{comment_content}}'></input>
+    </view>
+    <view class='comment-area-bottom-commit'>
+      <view class='comment-area-bottom-commit-text' bindtap='comment_function'>回复</view>
+    </view>
+  </view>
+</view>
+<view class='card'>
+
+  <view class='card-head'>
+    <view class='head-img-wrapper'>
+      <image class='head-img' mode='aspectFill' src='{{articalObj.sender_avatarurl}}'></image>
+    </view>
+    <view class='head-nickname'>
+      <text class='nickname'>{{articalObj.sender_nickname}}</text>
+    </view>
+  </view>
+  <view class='card-body'>
+    <view class='tag-area'>
+      <view class='tag'>
+        <image class='tag-img' mode='widthFix' src='/images/tag.png'></image>
+        <view class='tag-text'>{{topic.title}}</view>
+      </view>
+    </view>
+    <view class='content-area' bindtap='show_all_content'>
+      <view class='content'>
+        {{articalObj.artical}}
+      </view>
+    </view>
+    <view class='img-area' wx:if="{{articalObj.imgurl}}">
+      <block wx:for="{{articalObj.imgurl}}" wx:for-item="imgurl" wx:for-index="imgIndex" wx:key="*this">
+        <image class='user_image' data-articalIndex="{{articalIndex}}" data-imgIndex="{{imgIndex}}" src='{{imgurl}}' binderror='show_image_error' mode='widthFix' bindtap='previewImg'></image>
+      </block>
+
+    </view>
+  </view>
+  <view class='card-bottom'>
+    <view class='heat-wrapper'>
+      <text class='heat'>{{articalObj.artical_fever}}热度</text>
+    </view>
+    <view class='interact'>
+      <view class='comment-wrapper'>
+        <image class='comment' src='/images/comment.png' mode='widthFix' data-articalId='{{articalObj.declareid}}' bindtap='open_comment_function'></image>
+      </view>
+      <view class='transmit-wrapper'>
+        <button class='share'open-type="share">
+          <image class='transmit' src='/images/transmit.png' mode='widthFix'></image>
+        </button>
+        
+      </view>
+      <view class='like-wrapper'>
+        <image class='like' src='{{likeImgUrl}}' mode='widthFix' data-articalId='{{articalObj.declareid}}' data-likeState='{{like}}' bindtap='like_function'></image>
+      </view>
+    </view>
+  </view>
+</view>

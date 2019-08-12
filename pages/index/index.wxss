@@ -1,0 +1,320 @@
+/**index.wxss**/
+page { 
+  background-color: #fafafa;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rpx;
+  box-sizing: border-box;
+}
+
+.get-my-message {
+  display: flex;
+  margin-top: 200rpx;
+  margin-bottom: 20rpx
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-size: cover;
+  flex-shrink: 0;
+  height: 580rpx;
+  width: 100%;
+}
+
+.userinfo-top {
+  display: flex;
+  width: 100%;
+  height: 440rpx;
+  background: url('http://img.misakamiko.com/atmosphere-background-bright-19670.jpg');
+  background-size:100% 100%;
+}
+
+.userinfo-bottom {
+  display: flex;
+  width: 100%;
+  height: 140rpx;
+  background-color: white;
+  flex-direction: column
+}
+
+.img-container {
+  display: flex;
+  position: relative;
+  width: 150rpx;
+  height: 150rpx;
+  margin: auto;
+  margin-top: 320rpx;
+  border-radius: 50%; 
+  border: 5rpx solid white;
+  overflow: hidden
+}
+
+.userinfo-avatar {
+  height: 150rpx;
+  width: 150rpx
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: auto;
+  margin-bottom: 30rpx;
+}
+
+.userinfo-nickname {
+  height: auto;
+  width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  text-align: center;
+  font-size: 1.2rem
+}
+
+.usermotto {
+  display:flex;
+  width: auto;
+  height: auto;
+  margin: auto;
+  margin-top: 0rpx;
+  margin-bottom: 20rpx;
+  color: rgb(85, 84, 84);
+  font-size: 0.9rem
+}
+
+.navbar-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 0rpx
+}
+
+.navbar {
+  display: flex;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  height: 100rpx;
+  flex-direction: row;
+  text-align: center;
+  color: #a8a8a8;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 10rpx 30rpx #dee1e833;
+}
+
+.navbar-item {
+  flex: 1;
+  height: 40rpx;
+  padding: 26rpx 0px;
+}
+
+.navbar-item-active {
+  transition: all 0.1s;
+  border-bottom: 5rpx solid #74a5c3;
+  color: #74a5c3;
+  height: 45rpx;
+}
+
+.navbar-content-wrapper {
+  margin-top: 10rpx
+}
+
+.articalEmpty{
+  display:flex;
+  width: 100%;
+  height: 600rpx;
+  background-color: white;
+  flex-direction: column
+}
+
+.remind{
+  display: flex;
+  margin: auto;
+  margin-top: 100rpx;
+  margin-bottom: 0rpx;
+  font-size: 1rem;
+  color: rgb(104, 103, 103)
+}
+
+.writeSomething {
+  display: flex;
+  margin: auto;
+  margin-top: 50rpx;
+  font-size: 0.9rem;
+  color: #74a5c3;
+}
+
+.swiper-area {
+  display: flex;
+  
+}
+.swiper-items {
+  
+}
+
+
+.setting{
+  display: flex;
+  width: 95%;
+  height: 108rpx;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1rpx solid #dfdfdf;
+  border-radius: 20rpx
+}
+
+#nickname{
+  
+}
+
+.settinglogo{
+  display: block;
+  height: 60rpx;
+  width: 60rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 60rpx;
+}
+
+.settingtext{
+  color: rgb(99, 95, 95);
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+}
+
+.userNickName{
+  color: rgb(99, 95, 95);
+  display: block;
+  height: auto;
+  width: 280rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.userSex{
+  color: rgb(99, 95, 95);
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+}
+
+
+.userAge{
+  color: rgb(99, 95, 95);
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+}
+
+
+.userStudentId{
+  color: rgb(99, 95, 95);
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+}
+
+.arrow-wrapper{
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  margin-right: 40rpx
+}
+
+.arrow{
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-top: 5rpx solid #999;
+  border-right: 5rpx solid #999;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+
+
+.input-text{
+  width: 350rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+}
+
+.placeholderStyle{
+  color:#aaa;
+}
+
+
+
+.picker-container{
+  height: auto;
+  width: 350rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50rpx;
+  overflow: hidden;
+}
+
+.picker{
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.my-message {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.my-message-title{
+  display: flex;
+  height: 80rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #dfdfdf;
+  font-size: 0.8rem;
+}
+
+.my-message-title-wrapper{
+  margin: auto;
+  margin-left: 40rpx;
+  color: rgb(117, 115, 115);
+}
+
+.message-area-bottom {
+  display: flex;
+  height: 100rpx;
+}
+
+

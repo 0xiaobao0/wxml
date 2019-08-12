@@ -1,0 +1,59 @@
+/* pages/first/first.wxss */
+page { 
+  background-color: #36465d;
+  height: 100%;
+  width: 100%;
+}
+
+.loading-view {
+  display: flex;
+  height: 100%;
+  width: 100%
+}
+
+.loading-img {
+  width: 100%;
+  height: 100%
+}
+
+.movable_area {
+  display: flex;
+  height: auto;
+  width: 100%
+}
+
+
+
+.container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rpx;
+  box-sizing: border-box;
+  width: 100%
+}
+
+.movable_view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120rpx;
+  height: 120rpx;
+  right: 50rpx;
+  bottom: 50rpx;
+  border-radius: 50%;
+  background-color: #529fcd;
+  position: fixed
+}
+
+
+
+.write-logo{
+  display: flex;
+  width: 70rpx;
+  height: 70rpx;
+  margin: auto;
+  
+}

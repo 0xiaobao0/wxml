@@ -1,0 +1,30 @@
+<loading hidden="{{!isloading}}">登陆中</loading>
+<view class='route'>
+  <view class='head'>
+    <view class='back_container' bindtap='back_to_index'>
+      <image class='back' src='/images/changeuserinfo/back.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='body'>
+    <view class='inputArea'>
+      <view class='studentIdContanier'>
+        <view class='mytext'>
+          学号
+        </view>
+      </view>
+        <input placeholder='请输入教务系统学号' class='studentIdInput' placeholder-style='font-size:1rem' bindinput='get_studentId_value'></input>
+    </view>
+    <view class='inputArea'>
+      <view class='password'>
+        <view class='mytext'>
+          密码
+        </view>
+      </view>
+      <input placeholder='请输入密码' class='passwordInput' placeholder-style='font-size:1rem' bindinput='get_password_value' password='True'></input>
+    </view>
+
+    <view class='login' bindtap='login'>
+      <view class='login-container'>登录</view>
+    </view>
+  </view>
+</view>

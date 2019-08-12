@@ -1,0 +1,28 @@
+<!--pages/first/first.wxml-->
+<block wx:if="{{!topic}}">
+  <view class='close-view'>
+    
+  </view>
+</block>
+<block wx:else>
+  <view class='loading-view' wx:if="{{isloading}}">
+    <loading hidden="{{!isloading}}">首页加载中</loading>
+    <!-- <image class='loading-img' src='/images/welcome_page/first4.jpg' mode='aspectFill'></image> -->
+  </view>
+  <movable-area class='movable_area' wx:else>
+    <view class='container'>
+      <view class='message-list' style='width:100%'>
+        <block wx:for="{{articalList}}" wx:for-item="articalObj" wx:for-index="Index" wx:key="index">
+          <articalDisplay articalObj='{{articalObj}}' articalIndex='{{articalObj.declareid}}' token='{{token}}' articalLikeList='{{articalLikeList}}'></articalDisplay>
+        </block>
+      </view>
+
+      <movable-view class='movable_view' x="{{x}}" y="{{y}}" direction="all">
+
+        <image class='write-logo' src='/images/write.png' mode='widthFix' bindtap="go_to_write_page"></image>
+
+      </movable-view>
+
+    </view>
+  </movable-area>
+</block>

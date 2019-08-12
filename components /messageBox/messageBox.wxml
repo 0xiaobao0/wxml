@@ -1,0 +1,18 @@
+<!--components /messageBox/messageBox.wxml-->
+<view class='private-message'>
+  <view class='private-logo-area'>
+    <image class='private-message-logo' src='{{userObj.avatarUrl}}' mode='aspectFill' style='height:90rpx;width:90rpx'></image>
+  </view>
+  <view class='private-content'>
+    <view class='private-title'>
+      <text>{{userObj.nickName}}</text>
+    </view>
+    <view class='private-content-message-area'>
+      <text class='private-content-message'>{{messageObj}}</text>
+    </view>
+    <view class='message-send-time'>{{createTime}}</view>
+  </view>
+  <!-- <view class='private-message-arrow-area'>
+    <view class='private-message-arrow'></view>
+  </view> -->
+</view>

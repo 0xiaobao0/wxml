@@ -1,0 +1,58 @@
+<view class='container'>
+  <loading hidden="{{!isloading}}">提交中</loading>
+  <view class='card'>
+    <view class='card-head'>
+      <image class='head-img' mode='aspectFill' src='{{userinfo.avatarUrl}}'></image>
+      <view class='head-nickname'>
+        <text class='nickname'>{{userinfo.nickName}}</text>
+      </view>
+    </view>
+    <!-- <view class='artical-title-area'>
+      <view class='artical-title-wrapper'>
+        <input class='title' placeholder='标题(可选填)' placeholder-style='title-text-style' bindinput='titleInput'></input>
+      </view>
+    </view> -->
+    <view class='artical-area'>
+      <scroll-view class='artical-wrapper' scroll-y='true'>
+        <textarea class='artical' maxlength='1000' placeholder='来写点什么吧' placeholder-style='artical-text-style' bindinput='articalInput'></textarea>
+      </scroll-view>
+      <view class='input-num'>
+        <view class='num'>
+          {{artical_ength}}/1000
+        </view>
+      </view>
+    </view>
+    
+    <view class='img-area'>
+      <scroll-view scroll-y="true" class='img-wrapper' style='height:{{img_wrapper}}px'>
+
+        <view class='add-img' bindtap='chooseimage'>
+          <image class='add-img-bac' src='/images/camera.png'></image>
+          <text class='add-img-text'>图片/gif</text>
+        </view>
+        <block wx:for="{{img_arr}}" wx:for-item="item" wx:key="*this">
+          <view class='img-view'>
+            <!-- <icon class='cancel-img' type='cancel' size="40rpx" color='red' bindtap='cancelImg'></icon> -->
+            <image class='img' data-index="{{index}}" src='{{item}}' mode='aspectFill' bindtap="previewImg" bindlongpress='cancelImg'></image>
+          </view>
+
+        </block>
+
+      </scroll-view>
+    </view>
+    <view class='tag-area'>
+      <view class='tag'>
+        <image class='tag-img' mode='widthFix' src='/images/tag.png'></image>
+        <view class='tag-text'>{{topic.title}}</view>
+      </view>
+      <!-- <!-- <view class='private'>
+        <text class='private-text'>公开</text>
+        <switch class='private-switch' style='zoom:.8;' checked bindchange="switchChange"/>
+      </view> -->
+    </view>
+    <view class='card-bottom'>
+      <view class='close'><button type="primary" size="mini" bindtap='back'> 返回 </button></view>
+      <view class='commit'><button type="primary" size="mini" loading="{{loading}}" bindtap="commit"> 提交 </button></view>
+    </view>
+  </view>
+</view>

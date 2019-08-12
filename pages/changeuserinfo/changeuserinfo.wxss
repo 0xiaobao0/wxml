@@ -1,0 +1,93 @@
+/* pages/changeuserinfo/changeuserinfo.wxss */
+page { 
+  background-color: #fafafa;
+  height: 100%;
+  width: 100%;
+}
+
+.route{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: 0rpx;
+  flex-direction: column;
+}
+
+.head {
+  display: flexl;
+  height: 9%;
+  width: 100%;
+  background-color: #36465d;
+  margin-bottom: 10%
+}
+
+.back_container {
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+}
+
+.body{
+  display: flex;
+  height: 85%;
+  width: 100%;
+  flex-direction: column; 
+}
+
+.inputMessage{
+  display: flex;
+  height: 100rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  margin-top: 20rpx;
+  background-color: white;
+  flex-direction: row
+}
+
+.nickname{
+  display: flex;
+  height: 100%;
+  width: 20%
+}
+
+.nickNameInput {
+  display: flex;
+  height: 100%;
+  width: 60%;
+}
+
+
+.age{
+  display: flex;
+  height: 100%;
+  width: 20%
+}
+
+.ageInput {
+  height: 100%;
+  width: 80%;
+}
+
+.mytext{
+  display: flex;
+  margin: auto;
+}
+
+.submit{
+  display: flex;
+  height: 80rpx;
+  width: 80%;
+  color: white;
+  text-align: center;
+  background-color: #36465d;
+  border-radius: 10rpx;
+  margin: auto;
+  margin-bottom: 10%
+}
+
+.submit-container{
+  display: flex;
+  margin: auto
+}

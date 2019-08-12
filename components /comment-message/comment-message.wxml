@@ -1,0 +1,31 @@
+<!--components /comment-message/comment-message.wxml-->
+<view class='auther-message'>
+  <view class='auther-imgurl-container'>
+    <image class='auther-imgurl' mode='aspectFill' src='{{autherAvatarurl}}'></image>
+  </view>
+  <view class='auther-text-area'>
+    <view class='auther-nickname-wrapper'>
+      <text class='auther-nickname'>{{autherNickname}}</text>
+    </view>
+    <view class='auther-afternickname-text'>
+      发布了此贴
+    </view>
+
+  </view>
+</view>
+
+<block wx:for="{{articalComment}}" wx:for-item="CommentObj" wx:for-index="Index" wx:key="index">
+  <view class='message'>
+    <view class='sender-imgurl-container'>
+      <image class='sender-imgurl' mode='aspectFill' src='{{CommentObj.sender_info.avatarUrl}}'></image>
+    </view>
+    <view class='sender-text-area'>
+      <view class='sender-nickname-wrapper'>
+        <view class='sender-nickname'>{{CommentObj.sender_info.nickName}}</view>
+      </view>
+      <view class='sender-message-wrapper' >
+        <text class='sender-message'>{{CommentObj.content}}</text>
+      </view>
+    </view>
+  </view>
+</block>

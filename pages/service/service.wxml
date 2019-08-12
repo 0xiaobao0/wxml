@@ -1,0 +1,54 @@
+<view class='route'>
+  <view class='head'>
+    <view class='service_title'>
+      <text>校园服务</text>
+    </view>
+  </view>
+  <view class='body'>
+    <view class='serviceArea border-shadow' bindtap='go_to_myclass'>
+      <view class='serviceLogo'>
+        <image src='/images/service/timetable.png' mode='widthFix'></image>
+      </view>
+      <view class='serviceText'>
+        我的课表
+      </view>
+      <view class='arrow-wrapper'>
+        <view class='arrow'></view>
+      </view>
+    </view>
+    <view class='serviceArea border-shadow' bindtap='go_to_class_desing'>
+      <view class='serviceLogo'>
+        <image src='/images/service/classdesign.png' mode='widthFix'></image>
+      </view>
+      <view class='serviceText'>
+        我的课设
+      </view>
+      <view class='arrow-wrapper'>
+        <view class='arrow'></view>
+      </view>
+    </view>
+    <view class='serviceArea border-shadow'bindtap='go_to_myexperiment'>
+      <view class='serviceLogo'>
+        <image src='/images/service/experiment.png' mode='widthFix'></image>
+      </view>
+      <view class='serviceText'>
+        我的实验
+      </view>
+      <view class='arrow-wrapper'>
+        <view class='arrow'></view>
+      </view>
+    </view>
+    <view class='serviceArea border-shadow' bindtap='go_to_emptyclassroom'>
+      <view class='serviceLogo'>
+        <image src='/images/service/emptyclassroom.png' mode='widthFix'></image>
+      </view>
+      <view class='serviceText'>
+        空教室
+      </view>
+      <view class='arrow-wrapper'>
+        <view class='arrow'></view>
+      </view>
+    </view>
+    
+  </view>
+</view>

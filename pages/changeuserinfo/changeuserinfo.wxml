@@ -1,0 +1,22 @@
+<!--pages/changeuserinfo/changeuserinfo.wxml-->
+<view class='route'>
+  <view class='head'>
+    <view class='back_container' bindtap='back_to_index'>
+      <image class='back' src='/images/changeuserinfo/back.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='body'>
+    <view class='inputMessage'>
+      <view class='nickname'>
+        <view class='mytext'>
+          昵称
+        </view>
+      </view>
+        <input placeholder='请输入昵称' class='nickNameInput' placeholder-style='font-size:1rem' bindinput='get_nickname_value'></input>
+    </view>
+
+    <view class='submit' bindtap='submit_changge'>
+      <view class='submit-container'>提交修改</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/service/service",
+    "pages/first/first",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/first/write/write",
+    "pages/changeuserinfo/changeuserinfo",
+    "pages/bindstudentid/bindstudentid",
+    "pages/service/myclass/myclass",
+    "pages/service/classdesign/classdesign",
+    "pages/authpage/authpage",
+    "pages/service/myexperiment/myexperiment",
+    "pages/service/emptyclassroom/emptyclassroom",
+    "pages/service/selecttime/selecttime"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "TestApp",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#36465d"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "backgroundColor": "#36465d",
+    "position": "bottom",
+    "selectedColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "iconPath": "images/tabbar/selected_home.png",
+        "selectedIconPath": "images/tabbar/home.png",
+        "text": "话题"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "iconPath": "images/tabbar/selected_service.png",
+        "selectedIconPath": "images/tabbar/service.png",
+        "text": "服务"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/selected_me.png",
+        "selectedIconPath": "images/tabbar/me.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

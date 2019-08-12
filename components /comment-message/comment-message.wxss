@@ -1,0 +1,134 @@
+/* components /comment-message/comment-message.wxss */
+
+
+.auther-message {
+  display: flex;
+  height: 75rpx;
+  background-color: #f3f8fb;
+  font-size: 0.8rem;
+  flex-direction: row
+}
+
+
+.auther-imgurl-container {
+  display: flex;
+  height: 55rpx;
+  width: 55rpx;
+  margin: auto;
+  margin-left: 35rpx;
+  border-radius: 50%;
+  background-color: white
+}
+
+.auther-imgurl {
+  display: flex;
+  height: 55rpx;
+  width: 55rpx;
+  border-radius: 50%;
+}
+
+.auther-text-area{
+  display: flex;
+  height: 100%;
+  width: 540rpx;
+  margin: auto;
+  margin-left: 20rpx;
+}
+
+
+.auther-nickname-wrapper {
+  margin: auto;
+  max-width: 330rpx;
+  margin-left: 0rpx;
+  margin-right: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.auther-nickname {
+  margin: auto;
+  margin-left: 20rpx;
+}
+
+
+
+.auther-afternickname-text {
+  margin: auto;
+  margin-left: 0rpx;
+  color: rgb(129, 129, 129)
+}
+
+.message {
+  display: flex;
+  font-size: 0.8rem;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  flex-direction: row;
+}
+
+.sender-imgurl-container {
+  display: flex;
+  height: 55rpx;
+  width: 55rpx;
+  margin: auto;
+  margin-left: 35rpx;
+  margin-right: 0rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+  background-color: white
+}
+
+.sender-imgurl {
+  display: flex;
+  height: 55rpx;
+  width: 55rpx;
+  border-radius: 50%;
+}
+
+.sender-text-area{
+  display: flex;
+  height: 100%;
+  width: auto;
+  max-width: 500rpx;
+  margin: auto;
+  margin-left: 20rpx;
+  flex-direction: column;
+}
+
+
+.sender-nickname-wrapper {
+  height: 30rpx;
+  margin-top: 0rpx;
+  margin-left: 0rpx;
+  margin-right: 10rpx;
+  font-size: 0.6rem;
+  width: auto;
+  max-width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+
+}
+
+.sender-nickname {
+
+}
+
+
+
+.sender-message-wrapper {
+  max-width: 400rpx;
+  margin-top: 10rpx;
+  margin-left: 0rpx;
+  word-break:break-all;
+  background-color: white;
+  border-radius: 10px;
+} 
+
+.sender-message {
+  display: inline-block;
+  margin: 15rpx;
+  justify-content:center;
+  align-items:center;
+}

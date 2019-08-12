@@ -1,0 +1,152 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button class='get-my-message' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindtap='' bindgetuserinfo="getUserInfo"> 授权小程序 </button>
+    <block wx:else>
+      <view class='userinfo-top' bindtap='changebackground'>
+        <view class='img-container'>
+          <image mode="aspectFill" bindtap="changeimgurl" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+      </view>
+
+      <view class='userinfo-bottom'>
+        <view class='nickname-wrapper'>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+        <!-- <view class="usermotto">
+          <text class="user-motto">{{motto}}</text>
+        </view> -->
+      </view>
+    </block>
+
+  </view>
+  <view class="navbar-container" style='height:{{}}:rpx'>
+    <!-- 导航栏 -->
+    <view class="navbar">
+      <block wx:for="{{navbarTitle}}" wx:key="index">
+        <view class="navbar-item {{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="navbar-content-wrapper">
+      <swiper class='swiper-area' style='height:{{navbarContainerHeight[navbarActiveIndex]}}rpx' current="{{navbarActiveIndex}}" bindanimationfinish="onBindAnimationFinish">
+        <swiper-item class="swiper-items">
+          <view class='myArtical'>
+            <block wx:if='{{hasArtical}}'>
+              <block wx:for="{{articalList}}" wx:for-item="articalObj" wx:for-index="Index" wx:key="index">
+                <articalDisplay articalObj='{{articalObj}}' articalIndex='{{articalObj.declareid}}' token='{{token}}' articalLikeList='{{articalLikeList}}'></articalDisplay>
+              </block>
+            </block>
+            <block wx:else>
+              <view class='articalEmpty'>
+                <text class='remind'>你还没有发布任何动态哦</text>
+                <text class='writeSomething' bindtap='write'>写点什么吧</text>
+              </view>
+            </block>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class='my-message'>
+
+            <block wx:if='{{hasMessage}}'>
+              <view class='my-message-title'>
+                <view class='my-message-title-wrapper'>消息列表</view>
+              </view>
+              <!-- <messageBox messageType='私信' messageObj='{{privateMessageObj}}' userObj='{{pravateUserObj}}'></messageBox> -->
+              <!-- <messageBox messageType='系统通知' messageObj='{{sysMessageObj}}' userObj='{{sysUserObj}}'></messageBox> -->
+              <block wx:for="{{myMessage}}" wx:for-item="messageObject" wx:for-index="Index" wx:key="index">
+                <messageBox messageType='{{messageObject.messageType}}' messageObj='{{messageObject.message}}' userObj='{{messageObject.sender}}' messageIndex='{{messageObject.messageId}}' createTime='{{messageObject.create_time}}'></messageBox>
+              </block>
+              <view class='message-area-bottom'></view>
+            </block>
+            <block wx:else>
+              <view class='articalEmpty'>
+                <text class='remind'>你还没有收到任何消息哦</text>
+                <!-- <text class='writeSomething' bindtap='write'>写点什么吧</text> -->
+              </view>
+            </block>
+
+
+          </view>
+        </swiper-item>
+        <swiper-item id='self_setting'>
+          <view class='setting' id='nickname' bindtap='go_to_change_page'>
+            <image class='settinglogo' src='/images/setting/nickname.png'></image>
+            <text class='settingtext'>昵称</text>
+            <text class='userNickName'>{{userInfo.nickName}}</text>
+            <view class='arrow-wrapper'>
+              <view class='arrow'></view>
+            </view>
+          </view>
+
+          <view class='setting' id='sex'>
+            <image class='settinglogo' src='/images/setting/sex.png'></image>
+            <text class='settingtext'>性别</text>
+            <view class="picker-container">
+              <picker mode="selector" bindchange="sexPickerChange" value="{{sexindex}}" range="{{sexarray}}">
+                <view class="picker">
+                  {{sexarray[userInfo.gender]}}
+                </view>
+              </picker>
+            </view>
+            <view class='arrow-wrapper'>
+              <view class='arrow'></view>
+            </view>
+          </view>
+
+          <view class='setting' id='major'>
+            <image class='settinglogo' src='/images/setting/major.png'></image>
+            <text class='settingtext'>专业</text>
+            <view class="picker-container">
+              <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+                <view class="picker">
+                  <block wx:if='{{userInfo.major}}'>
+                    {{userInfo.major}}
+                  </block>
+                  <block wx:else>
+                    {{multiArray[0]}}
+                  </block>
+                </view>
+              </picker>
+            </view>
+            <view class='arrow-wrapper'>
+              <view class='arrow'></view>
+            </view>
+          </view>
+          <!-- <view class='setting' id='age'>
+            <image class='settinglogo' src='/images/setting/age.png'></image>
+            <text class='settingtext'>年龄</text>
+            <view class="picker-container">
+              <picker mode="selector" bindchange="changeAge" value="{{userInfo.age}}" range="{{ageList}}">
+                <view class="picker">
+                  {{userInfo.age}}
+                </view>
+              </picker>
+            </view>
+            <view class='arrow-wrapper'>
+              <view class='arrow'></view>
+            </view>
+          </view> -->
+          <view class='setting' id='studentid' bindtap='go_to_bind_studentid_page'>
+            <image class='settinglogo' src='/images/setting/studentid.png'></image>
+            <text class='settingtext'>学号</text>
+            <view class="userStudentId">
+              {{userInfo.studentId}}
+            </view>
+            <view class='arrow-wrapper'>
+              <view class='arrow'></view>
+            </view>
+          </view>
+          <view class='setting' bindtap='clean_storage'>
+            <image class='settinglogo' src='/images/setting/clean.png'></image>
+            <text class='settingtext'>清除缓存</text>
+            <view class='arrow-wrapper'>
+              <view class='arrow'></view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>
